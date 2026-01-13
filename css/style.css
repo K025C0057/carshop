@@ -18,7 +18,13 @@ img { max-width: 100%; height: auto; display: block; }
 .section { padding: 24px 0; }
 .section-title { margin: 0 0 12px; }
 
-.card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 横3 */
+  grid-template-rows: repeat(4, auto);   /* 縦4 */
+  gap: 20px;
+}
+
 .card { border: 1px solid #ddd; padding: 12px; }
 .card h3 { margin: 8px 0 4px; font-size: 16px; }
 .card p { margin: 0; font-size: 14px; }
@@ -38,3 +44,4 @@ img { max-width: 100%; height: auto; display: block; }
   .popular-box { grid-template-columns: 1fr; }
   .info-grid { grid-template-columns: 1fr; }
 }
+
