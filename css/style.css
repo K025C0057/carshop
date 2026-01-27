@@ -45,3 +45,159 @@ img { max-width: 100%; height: auto; display: block; }
   .info-grid { grid-template-columns: 1fr; }
 }
 
+/* 下記装飾 */
+
+/* 全体：黒ベース + 文字色 */
+body{
+  background: #0b0b0b;
+  color: #f2f2f2;
+}
+
+/* リンク色（デフォの青を消す） */
+a{
+  color: inherit;
+}
+
+/* ヘッダー：固定感のある黒、下線 */
+.site-header{
+  background: #000;
+  border-bottom: 1px solid #222;
+}
+
+/* タイトル：赤で強調 */
+.site-title a{
+  color: #e10600;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+/* ナビ：下線アニメ（hover） */
+.site-nav a{
+  position: relative;
+  padding: 4px 0;
+}
+.site-nav a::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: #e10600;
+  transition: width .25s ease;
+}
+.site-nav a:hover::after{
+  width: 100%;
+}
+
+/* セクション見出し：左に赤ライン */
+.section-title{
+  font-size: 26px;
+  border-left: 6px solid #e10600;
+  padding-left: 12px;
+  margin-bottom: 22px;
+}
+
+/* Hero：雰囲気付け */
+.hero{
+  padding: 40px 0 10px;
+  background: linear-gradient(to right, #000, #111);
+}
+
+/* Hero画像：角丸 + うっすら影 */
+.hero-img{
+  border-radius: 10px;
+  box-shadow: 0 10px 26px rgba(0,0,0,.55);
+}
+
+/* ボタン：赤で強調 + ホバー */
+.btn{
+  border: none;
+  background: #e10600;
+  color: #fff;
+  font-weight: 800;
+  border-radius: 999px;
+  padding: 12px 18px;
+  transition: transform .2s ease, background .2s ease;
+}
+.btn:hover{
+  background: #ff1a1a;
+  transform: translateY(-2px);
+}
+
+/* カード：黒いパネル + 影 + ホバー浮き */
+.card{
+  background: #111;
+  border: 1px solid #1f1f1f;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0,0,0,.45);
+  padding: 0; 
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.card:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 16px 34px rgba(0,0,0,.75);
+}
+
+/* カード内の画像：高さを揃えてカッコよく（modelsの12枚に効く） */
+.card img{
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+}
+
+/* カード文字：余白と色 */
+.card h3{
+  margin: 12px 14px 6px;
+  font-size: 16px;
+  letter-spacing: .2px;
+}
+.card p{
+  margin: 0 14px 14px;
+  font-size: 13px;
+  color: #bdbdbd;
+}
+
+/* 人気枠：黒パネル化 */
+.popular-box{
+  background: #111;
+  border: 1px solid #1f1f1f;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0,0,0,.45);
+}
+.popular-box img{
+  border-radius: 10px;
+}
+
+/* Aboutの情報ボックスもパネル化 */
+.info-box{
+  background: #111;
+  border: 1px solid #1f1f1f;
+  border-radius: 12px;
+}
+
+/* フッター：黒＋Topリンク赤 */
+.site-footer{
+  background: #000;
+  border-top: 1px solid #222;
+}
+.site-footer small{
+  color: #8a8a8a;
+}
+.to-top{
+  color: #e10600;
+  font-weight: 700;
+}
+
+/* 4x3のグリッド感強 */
+.card-grid{
+  gap: 22px;
+}
+
+/* スマホ時：画像高さ下げる */
+@media (max-width: 768px){
+  .card img{
+    height: 170px;
+  }
+}
