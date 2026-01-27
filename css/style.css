@@ -221,21 +221,3 @@ a{
   max-height: 90vh;
   object-fit: contain;
 }
-
-/* .auto-rotate { 
-  transition: transform 0.1s linear;
-} */
-
-/* indexページ用：自動回転 */
-.rotate-index {
-  animation: index-spin 8s linear infinite;
-}
-
-@keyframes index-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
