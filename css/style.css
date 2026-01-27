@@ -201,3 +201,41 @@ a{
     height: 170px;
   }
 }
+
+/* =========================
+   Luminous（ライトボックス）位置修正
+========================= */
+
+/* 画面中央に配置 */
+.lum-lightbox {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 画像自体の中央寄せ */
+.lum-lightbox-inner img {
+  display: block;
+  margin: 0 auto;
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+}
+
+/* .auto-rotate { 
+  transition: transform 0.1s linear;
+} */
+
+/* indexページ用：自動回転 */
+.rotate-index {
+  animation: index-spin 8s linear infinite;
+}
+
+@keyframes index-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
